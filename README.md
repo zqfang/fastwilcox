@@ -16,7 +16,7 @@ This is a Python implementation of the `wilcoxauc` from the R' [presto package](
 
 ```bash
 cd python
-pip install -e .
+pip install fastwilcox
 ```
 
 For development:
