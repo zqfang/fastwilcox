@@ -92,18 +92,6 @@ Run tests with coverage:
 pytest tests/ --cov=fastwilcox --cov-report=html
 ```
 
-## Release
-
-Publishing to PyPI is automated via GitHub Actions defined in `.github/workflows/ci.yml`.
-
-1. Create a PyPI API token with scope "Project: fastwilcox" at <https://pypi.org/manage/account/token/>.
-2. In the repository, navigate to *Settings → Secrets and variables → Actions* and add a secret named `PYPI_API_TOKEN` containing the token value.
-3. Bump the version in both `pyproject.toml` and `fastwilcox/__init__.py`, commit, and push to `main`.
-4. Publish a Git tag and GitHub release (e.g., `v0.1.1`), or trigger the workflow manually from the Actions tab via **CI and Publish → Run workflow**.
-5. The workflow runs the full test matrix, builds the sdist/wheel artifacts, and uploads them to PyPI when the release job succeeds.
-
-To target TestPyPI instead, set the `repository-url` input of the publish step to `https://test.pypi.org/legacy/` and provide a `TEST_PYPI_API_TOKEN` secret.
-
 ## Performance
 
 This implementation is optimized for:
@@ -120,4 +108,4 @@ MIT License
 
 ## Citation
 
-If you use this software, please cite the Toucan project.
+If you use this software, please cite the fastwilcox project.
